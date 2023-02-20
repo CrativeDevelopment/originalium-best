@@ -108,7 +108,35 @@ function PlasmicNewPage__RenderFunc(props: {
 
   return (
     <React.Fragment>
-      <Head></Head>
+      <Head>
+        <meta name="twitter:card" content="summary" />
+        <title key="title">{PlasmicNewPage.pageMetadata.title}</title>
+        <meta
+          key="og:title"
+          property="og:title"
+          content={PlasmicNewPage.pageMetadata.title}
+        />
+        <meta
+          key="twitter:title"
+          name="twitter:title"
+          content={PlasmicNewPage.pageMetadata.title}
+        />
+        <meta
+          key="description"
+          name="description"
+          content={PlasmicNewPage.pageMetadata.description}
+        />
+        <meta
+          key="og:description"
+          property="og:description"
+          content={PlasmicNewPage.pageMetadata.description}
+        />
+        <meta
+          key="twitter:description"
+          name="twitter:description"
+          content={PlasmicNewPage.pageMetadata.description}
+        />
+      </Head>
 
       <style>{`
         body {
@@ -642,8 +670,9 @@ export const PlasmicNewPage = Object.assign(
 
     // Page metadata
     pageMetadata: {
-      title: "",
-      description: "",
+      title: "originalium za best!",
+      description:
+        "with help from baba akram, and honduras, we have been able to create the most best and funniest minecraft server ever, originalium! founder: trende2001",
       ogImageSrc: "",
       canonical: ""
     }
